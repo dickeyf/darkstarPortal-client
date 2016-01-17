@@ -2,6 +2,7 @@
 
 # IDEs
 *.iml
+/.idea
 
 # compiled output
 /dist
