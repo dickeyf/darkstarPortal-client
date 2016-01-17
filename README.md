@@ -1,7 +1,17 @@
 # Darkstar-portal-client
 
-This README outlines the details of collaborating on this Ember application.
+The goal of this project is to create a web frontend to the Darkstar server which
+allows administrators to do various admin task, and allows players to
+administer their account and characters.
+
+# Collaborating
+
+This section outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+## License
+
+This project is licensed as GPL V3.
 
 ## Prerequisites
 
@@ -50,4 +60,5 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
 
