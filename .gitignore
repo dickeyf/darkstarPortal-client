@@ -4,6 +4,9 @@
 *.iml
 /.idea
 
+# Mock storage
+users
+
 # compiled output
 /dist
 /tmp
