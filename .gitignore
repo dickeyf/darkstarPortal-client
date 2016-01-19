@@ -5,7 +5,7 @@
 /.idea
 
 # Mock storage
-users
+accounts
 
 # compiled output
 /dist
