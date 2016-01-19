@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dickeyf/darkstarPortal-client.svg?branch=master)](https://travis-ci.org/dickeyf/darkstarPortal-client)
+
 # Darkstar-portal-client
 
 The goal of this project is to create a web frontend to the Darkstar server which
