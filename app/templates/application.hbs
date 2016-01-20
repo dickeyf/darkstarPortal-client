@@ -4,10 +4,10 @@
             Welcome to Darkstar Portal!
         </div>
         <div class="col-md-2">
-            {{#if account}}
-                Hello, {{account.login}}
+            {{#if session}}
+                Hello, {{session.account.login}}
             {{/if}}
-            {{#unless account}}
+            {{#unless session}}
                 {{#link-to "login"}}Login{{/link-to}}
                 {{#link-to "register"}}Register{{/link-to}}
             {{/unless}}

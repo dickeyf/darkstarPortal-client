@@ -9,10 +9,15 @@ module.exports = function(app) {
   var accountDB = new nedb({ filename: 'accounts', autoload: true});
 
   accountsRouter.get('/', function(req, res) {
-    accountDB.find(req.query).exec(function(error,accounts) {
-      res.send({
-        'accounts': accounts
-      });
+    accountDB.find({login: req.param('login')}).exec(function(error,accounts) {
+      if (accounts.length == 0) {
+        res.sendStatus(404);
+      } else {
+        res.send({
+          'token': 'testToken',
+          'account': accounts[0]
+        });
+      }
     });
   });
 

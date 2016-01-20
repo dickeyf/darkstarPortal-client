@@ -3,18 +3,16 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     login: function() {
-      this.store.query('account', {
-        login: this.controller.get('login')
-      }).then((accounts) => {
-          if (accounts.get('length') === 1) {
-            var account = accounts.objectAt(0);
-            this.controllerFor('application').set('account', account);
-            this.transitionTo('accounts');
-          } else {
-            console.log('unexpected query result');
-          }
-        }
-      );
+      var login = this.controller.get('login');
+      var password = this.controller.get('password');
+      if (!Ember.isEmpty(login) && !Ember.isEmpty(password)) {
+        Ember.$.get('/api/accounts', {
+          login: login, password: password
+        }, (data) => {
+          this.controllerFor('application').set('session', data);
+          this.router.transitionTo('accounts');
+        });
+      }
     }
   }
 });
